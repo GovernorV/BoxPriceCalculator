@@ -166,6 +166,12 @@ img{width:100%;border-radius:16px;display:block}
     object-position:center center;
   }
 }
+.other-products .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.other-card{padding:0;overflow:hidden}
+.other-card img{border-radius:0;aspect-ratio:4/3;object-fit:cover}
+.other-card .body{padding:18px}
+.other-card h3{font-size:18px}
+@media(max-width:900px){.other-products .cards{grid-template-columns:1fr}}
 </style>
 </head>
 
@@ -472,6 +478,39 @@ img{width:100%;border-radius:16px;display:block}
   </div>
 </section>
 
+  <!-- OTHER PRODUCTS (RU) -->
+  <section class="other-products">
+    <div class="container">
+      <h2>Познакомьтесь также с другими моими программами</h2>
+      <div class="cards">
+        <article class="card other-card">
+          <a href="https://governorv.github.io/DBSearch/#ru" target="_blank" rel="noopener"><img src="dbsearch_banner.png" alt="Поиск по базе данных"></a>
+          <div class="body">
+            <h3>Поиск по базе данных</h3>
+            <p>Поиск объектов и данных в SQL Server, просмотр кода, фильтры и экспорт результатов.</p>
+            <a class="btn secondary" href="https://governorv.github.io/DBSearch/#ru" target="_blank" rel="noopener">Страница</a>
+          </div>
+        </article>
+        <article class="card other-card">
+          <a href="https://governorv.github.io/Licman/" target="_blank" rel="noopener"><img src="licman_banner.png" alt="Менеджер лицензий"></a>
+          <div class="body">
+            <h3>Менеджер лицензий</h3>
+            <p>Учёт лицензий, контроль сроков действия, ответственные, уведомления и экспорт в Excel.</p>
+            <a class="btn secondary" href="https://governorv.github.io/Licman/" target="_blank" rel="noopener">Страница</a>
+          </div>
+        </article>
+        <article class="card other-card">
+          <a href="https://governorv.github.io/BoxPalletizer/" target="_blank" rel="noopener"><img src="palletizer_banner.png" alt="Паллетировщик"></a>
+          <div class="body">
+            <h3>Паллетировщик</h3>
+            <p>Расчёт укладки коробов на поддон, 3D-визуализация, ограничения и отчёты.</p>
+            <a class="btn secondary" href="https://governorv.github.io/BoxPalletizer/" target="_blank" rel="noopener">Страница</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
 
 
@@ -764,6 +803,38 @@ img{width:100%;border-radius:16px;display:block}
   </div>
 </section>
 
+  <!-- OTHER PRODUCTS (EN) -->
+  <section class="other-products">
+    <div class="container">
+      <h2>Explore my other software as well</h2>
+      <div class="cards">
+        <article class="card other-card">
+          <a href="https://governorv.github.io/DBSearch/#en" target="_blank" rel="noopener"><img src="dbsearch_banner_en.png" alt="Database Search"></a>
+          <div class="body">
+            <h3>Database Search</h3>
+            <p>Search SQL Server objects and data, view code, filter results and export reports.</p>
+            <a class="btn secondary" href="https://governorv.github.io/DBSearch/#en" target="_blank" rel="noopener">Page</a>
+          </div>
+        </article>
+        <article class="card other-card">
+          <a href="https://governorv.github.io/Licman/#en" target="_blank" rel="noopener"><img src="licman_banner_en.png" alt="License Manager"></a>
+          <div class="body">
+            <h3>License Manager</h3>
+            <p>Track licenses, expiration dates, owners, notifications and Excel exports.</p>
+            <a class="btn secondary" href="https://governorv.github.io/Licman/#en" target="_blank" rel="noopener">Page</a>
+          </div>
+        </article>
+        <article class="card other-card">
+          <a href="https://governorv.github.io/BoxPalletizer/#en" target="_blank" rel="noopener"><img src="palletizer_banner_en.png" alt="Palletizer"></a>
+          <div class="body">
+            <h3>Palletizer</h3>
+            <p>Plan pallet stacking with 3D visualization, constraints and exportable reports.</p>
+            <a class="btn secondary" href="https://governorv.github.io/BoxPalletizer/#en" target="_blank" rel="noopener">Page</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA -->
   <section>
