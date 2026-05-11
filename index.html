@@ -132,6 +132,40 @@ img{width:100%;border-radius:16px;display:block}
   color:#071021;
 }
 .hidden{display:none !important;}
+
+.top-banner{
+  position:relative;
+  min-height:180px;
+  height:clamp(180px,24vw,320px);
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:#071021;
+}
+.top-banner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  border-radius:0;
+}
+.top-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(11,18,32,.35),rgba(11,18,32,0) 26%,rgba(11,18,32,0) 72%,rgba(11,18,32,.38)),
+    linear-gradient(180deg,rgba(11,18,32,.12),rgba(11,18,32,.42));
+}
+@media(max-width:700px){
+  .top-banner{
+    min-height:150px;
+    height:42vw;
+  }
+  .top-banner img{
+    object-position:center center;
+  }
+}
 </style>
 </head>
 
@@ -155,6 +189,10 @@ img{width:100%;border-radius:16px;display:block}
     </div>
   </div>
 </header>
+
+<div class="top-banner" aria-label="Box Price Calculator warehouse automation banner">
+  <img src="box-price-calc-top-banner.png" alt="Warehouse automation and packaging cost analytics">
+</div>
 
 <!-- ========================= RU ========================= -->
 <main id="top" data-lang="ru">
