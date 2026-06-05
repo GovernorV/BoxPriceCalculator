@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -240,27 +240,30 @@ html.day-theme .topbar{
 }
 .logo{
   width:34px; height:34px; border-radius:12px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  object-fit:cover;
   box-shadow: 0 18px 50px rgba(106,169,255,.14);
 }
 .brand .name{display:flex; flex-direction:column; line-height:1.1}
 .brand .name strong{font-size:14px}
 .brand .name span{font-size:12px; color:var(--muted)}
-.lang{display:flex; gap:8px; align-items:center}
-.lang button{
+.lang{
+  display:inline-flex; gap:4px; align-items:center;
+  padding:4px;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.04);
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+}
+html.day-theme .lang{background:#ffffff}
+.lang button{
+  border:0;
+  background:transparent;
   color:var(--text);
-  border-radius:12px;
-  padding:8px 10px;
-  font-weight:700;
+  border-radius:999px;
+  padding:10px 18px;
+  font-weight:800;
   cursor:pointer;
 }
-html.day-theme .lang button{
-  background:#ffffff;
-}
 .lang button.active{
-  border-color:transparent;
   background:linear-gradient(135deg,var(--accent),var(--accent2));
   color:#071021;
 }
@@ -314,17 +317,17 @@ html.day-theme .lang button{
 <header class="topbar">
   <div class="container">
     <div class="inner">
-      <a class="brand" href="#top" aria-label="Box Price Calculator">
-        <div class="logo" aria-hidden="true"></div>
+      <a class="brand" href="#top" aria-label="Калькулятор гофроящиков">
+        <img class="logo" src="Boxpricecalc_Icon.ico" alt="">
         <div class="name">
-          <strong>Box Price Calculator</strong>
+          <strong>Калькулятор гофроящиков</strong>
           <span id="tagline">Калькулятор стоимости гофроупаковки</span>
         </div>
       </a>
 
       <div class="lang" aria-label="Language switcher">
-        <button id="btn-ru" type="button">RU</button>
-        <button id="btn-en" type="button">EN</button>
+        <button id="btn-ru" type="button">Русский</button>
+        <button id="btn-en" type="button">English</button>
       </div>
     </div>
   </div>
@@ -655,11 +658,11 @@ html.day-theme .lang button{
           </div>
         </article>
         <article class="card other-card">
-          <a href="https://governorv.github.io/palletizer-site/" target="_blank" rel="noopener"><img src="platepalletizer_banner.png" alt="Паллетировщик плит"></a>
+          <a href="https://governorv.github.io/palletizer-site/#ru" target="_blank" rel="noopener"><img src="platepalletizer_banner.png" alt="Паллетировщик плит"></a>
           <div class="body">
             <h3>Паллетировщик плит</h3>
             <p>Оптимальное распределение листовых материалов по поддонам: импорт заявок из Excel, расчет поддонов, контроль размеров, веса, высоты и цвета.</p>
-            <a class="btn secondary" href="https://governorv.github.io/palletizer-site/" target="_blank" rel="noopener">Страница</a>
+            <a class="btn secondary" href="https://governorv.github.io/palletizer-site/#ru" target="_blank" rel="noopener">Страница</a>
           </div>
         </article><article class="card other-card">
           <a href="https://governorv.github.io/gost/" target="_blank" rel="noopener"><img src="gost914290_banner.png" alt="Расчет нагрузки на гофроящик по ГОСТ 9142-2014"></a>
@@ -1009,11 +1012,11 @@ html.day-theme .lang button{
           </div>
         </article>
         <article class="card other-card">
-          <a href="https://governorv.github.io/palletizer-site/" target="_blank" rel="noopener"><img src="platepalletizer_banner_en.png" alt="Plate Palletizer"></a>
+          <a href="https://governorv.github.io/palletizer-site/#en" target="_blank" rel="noopener"><img src="platepalletizer_banner_en.png" alt="Plate Palletizer"></a>
           <div class="body">
             <h3>Plate Palletizer</h3>
             <p>Optimal pallet distribution for sheet materials: Excel order import, pallet calculation, size, weight, height and color control.</p>
-            <a class="btn secondary" href="https://governorv.github.io/palletizer-site/" target="_blank" rel="noopener">Page</a>
+            <a class="btn secondary" href="https://governorv.github.io/palletizer-site/#en" target="_blank" rel="noopener">Page</a>
           </div>
         </article><article class="card other-card">
           <a href="https://governorv.github.io/gost/" target="_blank" rel="noopener"><img src="gost914290_banner.png" alt="GOST 9142-2014 Box Load Calculator"></a>
@@ -1057,6 +1060,7 @@ html.day-theme .lang button{
   const btnRu = document.getElementById("btn-ru");
   const btnEn = document.getElementById("btn-en");
   const mains = Array.from(document.querySelectorAll("main[data-lang]"));
+  const brandTitle = document.querySelector(".brand .name strong");
   const tagline = document.getElementById("tagline");
 
   function applyAutoTheme(){
@@ -1098,6 +1102,11 @@ html.day-theme .lang button{
     if (ogUrl) ogUrl.setAttribute("content", meta.url);
     if (twitterTitle) twitterTitle.setAttribute("content", meta.ogTitle);
     if (twitterDesc) twitterDesc.setAttribute("content", meta.ogDesc);
+    if (brandTitle){
+      brandTitle.textContent = (lang === RU)
+        ? "Калькулятор гофроящиков"
+        : "Box Price Calculator";
+    }
     if (tagline){
       tagline.textContent = (lang === RU)
         ? "Калькулятор стоимости гофроупаковки"
