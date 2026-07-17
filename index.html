@@ -307,6 +307,14 @@ html.day-theme .lang{background:#ffffff}
 .other-card img{border-radius:0;aspect-ratio:3/2;object-fit:contain;background:#fff}
 .other-card .body{padding:22px}
 .other-card h3{font-size:20px}
+.review-card{padding:clamp(24px,4vw,38px);border-left:5px solid var(--accent)}
+.review-topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px}
+.review-source{color:var(--accent);font-size:19px;font-weight:800}
+.review-score{color:#b7791f;font-weight:900;white-space:nowrap}
+.review-by{color:var(--muted);margin:0 0 22px}
+.review-copy{max-width:900px;line-height:1.7}
+.review-copy p{margin:0 0 14px}
+.review-card .btn{margin-top:8px}
 @media(max-width:1050px){.other-products .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.other-products .cards{grid-template-columns:1fr}}
 </style>
@@ -631,6 +639,26 @@ html.day-theme .lang{background:#ffffff}
     </ol>
   </div>
 </section>
+
+  <section id="ru-reviews">
+    <div class="container">
+      <h2>Отзывы</h2>
+      <p class="lead">Независимый обзор программы на Softpedia.</p>
+      <article class="card review-card">
+        <div class="review-topline">
+          <span class="review-source">Softpedia Review</span>
+          <span class="review-score">★ 3.5/5</span>
+        </div>
+        <p class="review-by">Обзор подготовил Robert Condorache</p>
+        <div class="review-copy">
+          <p>Softpedia отмечает, что Box Price Calculator делает расчёт гофроупаковки прозрачным: помогает учитывать тип и размер изделия, материалы, печать, упаковку, доставку и итоговую стоимость.</p>
+          <p>Рецензент выделяет расчёты для гофроящиков, листов и рулонов, возможность сравнивать параметры картона и слоёв, а также встроенный паллетировщик пачек для эффективного использования места.</p>
+          <p>Дополнительными преимуществами названы учёт доставки и штампов, отчёты и технические карты, а также автоматический расчёт файлов из отслеживаемой папки.</p>
+        </div>
+        <a class="btn secondary" href="https://www.softpedia.com/get/Others/Finances-Business/Box-Price-Calculator.shtml" target="_blank" rel="noopener">Читать полный обзор на Softpedia</a>
+      </article>
+    </div>
+  </section>
 
   <!-- OTHER PRODUCTS (RU) -->
   <section class="other-products">
@@ -1000,6 +1028,26 @@ html.day-theme .lang{background:#ffffff}
     </p>
   </div>
 </section>
+
+  <section id="en-reviews">
+    <div class="container">
+      <h2>Reviews</h2>
+      <p class="lead">An independent Softpedia review of the application.</p>
+      <article class="card review-card">
+        <div class="review-topline">
+          <span class="review-source">Softpedia Review</span>
+          <span class="review-score">★ 3.5/5</span>
+        </div>
+        <p class="review-by">Reviewed by Robert Condorache</p>
+        <div class="review-copy">
+          <p>Softpedia highlights Box Price Calculator as a transparent way to estimate corrugated-packaging costs, covering package type and size, materials, printing, packing, delivery, and the final price.</p>
+          <p>The reviewer praises its calculations for corrugated boxes, sheets, and rolls, its support for comparing board and layer parameters, and the built-in bundle palletizer for efficient use of space.</p>
+          <p>Other strengths include delivery and stamp costs, detailed reports and technical maps, and automatic file-based calculations through the Monitoring feature.</p>
+        </div>
+        <a class="btn secondary" href="https://www.softpedia.com/get/Others/Finances-Business/Box-Price-Calculator.shtml" target="_blank" rel="noopener">Read the full review on Softpedia</a>
+      </article>
+    </div>
+  </section>
 
   <!-- OTHER PRODUCTS (EN) -->
   <section class="other-products">
