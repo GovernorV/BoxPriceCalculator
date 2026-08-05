@@ -360,6 +360,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   .construction-card h3{margin:0;padding:14px 16px 16px;font-size:1rem;letter-spacing:.02em}.construction-note{margin:22px 0 0;color:var(--muted);font-size:.92rem}
   @media(max-width:900px){.construction-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:680px){.construction-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:420px){.construction-grid{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="https://governorv.github.io/assets/unified-language.css">
 </head>
 
 <body>
@@ -576,24 +577,11 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- MULTILANG + UPDATES -->
+  <section class="pt-language-section">
+    <div class="pt-language-card"><div class="pt-language-copy"><h2>Мультиязычный интерфейс</h2><p>Калькулятор гофроящиков уже поставляется со словарями интерфейса для десяти языков. Переключение языка помогает внедрять программу в смешанных командах и на площадках с разными рабочими языками.</p><div class="pt-language-chips" aria-label="Поддерживаемые языки"><span class="pt-language-chip">Русский</span><span class="pt-language-chip">English</span><span class="pt-language-chip">Deutsch</span><span class="pt-language-chip">Français</span><span class="pt-language-chip" dir="rtl">עברית</span><span class="pt-language-chip">Italiano</span><span class="pt-language-chip">Қазақша</span><span class="pt-language-chip">Português</span><span class="pt-language-chip">Српски</span><span class="pt-language-chip">Español</span></div></div><p class="pt-language-note">Если нужен другой язык, можно самостоятельно создать словарь перевода для любого языка и подключить его к программе.</p></div>
+  </section>
   <section>
-    <div class="container grid2">
-      <div class="card">
-        <h2>Мультиязычность</h2>
-        <p>
-          Интерфейс многоязычный: переводы подключаются файлами <b>.lng</b>.
-          Достаточно добавить новый <b>.lng</b> в папку программы — язык появится в списке.
-        </p>
-        <p><b>Языки интерфейса:</b></p>
-        <div aria-label="Поддерживаемые языки">
-          <span class="badge">Русский</span><span class="badge">English</span><span class="badge">Français</span><span class="badge">Deutsch</span><span class="badge" dir="rtl">עברית</span><span class="badge">Italiano</span><span class="badge">Қазақша</span><span class="badge">Português</span><span class="badge">Српски</span><span class="badge">Español</span>
-        </div>
-        <p class="small" style="margin-top:12px">
-          Пользователь может добавить свой язык самостоятельно — без перекомпиляции.
-        </p>
-      </div>
-
-      <div class="card">
+    <div class="container"><div class="card">
         <h2>Обновления и словари</h2>
         <p>
           Программа может проверять наличие обновлений при запуске (проверку можно включать/отключать).
@@ -602,8 +590,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         <div class="warn">
           <b>Практично:</b> пользователи получают улучшения и обновлённые словари без “ручной установки”.
         </div>
-      </div>
-    </div>
+      </div></div>
   </section>
 
   <!-- AUTOMATION -->
@@ -624,7 +611,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
 <!-- DOWNLOAD & PRICING (RU) -->
-<section>
+<section id="ru-pricing">
   <div class="container card">
     <h2>Демоверсия и условия лицензирования</h2>
 
@@ -991,24 +978,11 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- MULTILANG + UPDATES -->
+  <section class="pt-language-section">
+    <div class="pt-language-card"><div class="pt-language-copy"><h2>Multilingual interface</h2><p>Box Price Calculator already ships with interface dictionaries for ten languages. Language switching helps deploy the program in mixed teams and production sites with different working languages.</p><div class="pt-language-chips" aria-label="Supported languages"><span class="pt-language-chip">Русский</span><span class="pt-language-chip">English</span><span class="pt-language-chip">Deutsch</span><span class="pt-language-chip">Français</span><span class="pt-language-chip" dir="rtl">עברית</span><span class="pt-language-chip">Italiano</span><span class="pt-language-chip">Қазақша</span><span class="pt-language-chip">Português</span><span class="pt-language-chip">Српски</span><span class="pt-language-chip">Español</span></div></div><p class="pt-language-note">If another language is needed, you can create your own translation dictionary for any language and connect it to the program.</p></div>
+  </section>
   <section>
-    <div class="container grid2">
-      <div class="card">
-        <h2>Multilingual UI</h2>
-        <p>
-          The UI is language-module based: translations are stored as <b>.lng</b> files.
-          Add a new <b>.lng</b> file to the program folder and it appears in the language list.
-        </p>
-        <p><b>UI languages:</b></p>
-        <div aria-label="Supported languages">
-          <span class="badge">Русский</span><span class="badge">English</span><span class="badge">Français</span><span class="badge">Deutsch</span><span class="badge" dir="rtl">עברית</span><span class="badge">Italiano</span><span class="badge">Қазақша</span><span class="badge">Português</span><span class="badge">Српски</span><span class="badge">Español</span>
-        </div>
-        <p class="small" style="margin-top:12px">
-          Users can add their own language without recompilation.
-        </p>
-      </div>
-
-      <div class="card">
+    <div class="container"><div class="card">
         <h2>Updates & dictionaries</h2>
         <p>
           The program can check for updates on startup (this can be enabled/disabled).
@@ -1017,8 +991,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         <div class="warn">
           <b>Practical:</b> users receive improvements and updated dictionaries with minimal friction.
         </div>
-      </div>
-    </div>
+      </div></div>
   </section>
 
   <!-- AUTOMATION -->
@@ -1037,7 +1010,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
     </div>
   </section>
 <!-- DOWNLOAD & PRICING (EN) -->
-<section>
+<section id="en-pricing">
   <div class="container card">
     <h2>Demo version and pricing</h2>
 
@@ -1184,7 +1157,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 </section>
 
   <!-- CTA -->
-  <section>
+<section>
     <div class="container card">
       <h2>Contact</h2>
       <p>
@@ -1315,6 +1288,10 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
     mains.forEach(m => {
       m.classList.toggle("hidden", m.getAttribute("data-lang") !== lang);
     });
+
+    const constructionCatalog = document.getElementById("constructions");
+    const pricingSection = document.getElementById(lang === RU ? "ru-pricing" : "en-pricing");
+    if (constructionCatalog && pricingSection) pricingSection.before(constructionCatalog);
 
     btnRu.classList.toggle("active", lang === RU);
     btnEn.classList.toggle("active", lang === EN);
