@@ -153,6 +153,10 @@ section{padding:52px 0}
 .deployment-logo{width:112px;height:48px;flex:0 0 112px;object-fit:contain;border-radius:8px;border:1px solid var(--line);background:#fff;padding:4px}
 .deployment-nav{display:inline-block;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700}
 .deployment-nav:hover{border-color:var(--accent)}
+.section-nav{order:3;flex:1 0 100%;min-width:0;display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px}
+.section-nav a{flex:0 0 auto;white-space:nowrap}
+.section-nav a[hidden]{display:none}
+section[id]{scroll-margin-top:var(--header-offset,180px)}
 .topbar .inner{flex-wrap:wrap}
 h1,h2,h3{margin:0 0 12px}
 p{margin:0 0 12px;color:var(--muted)}
@@ -384,7 +388,23 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         </div>
       </a>
 
-      <nav aria-label="Навигация"><a class="deployment-nav" id="deployment-nav" href="#ru-deployment">Внедрение</a></nav>
+      <nav class="section-nav" aria-label="Разделы сайта">
+        <a class="deployment-nav" href="#ru-overview" data-nav-ru="О программе" data-nav-en="About" data-target-ru="ru-overview" data-target-en="en-overview">О программе</a>
+        <a class="deployment-nav" href="#ru-work" data-nav-ru="В работе" data-nav-en="In use" data-target-ru="ru-work" data-target-en="en-work">В работе</a>
+        <a class="deployment-nav" href="#ru-how" data-nav-ru="Как работает" data-nav-en="How it works" data-target-ru="ru-how" data-target-en="en-how">Как работает</a>
+        <a class="deployment-nav" href="#ru-palletizer" data-nav-ru="Паллетировщик" data-nav-en="Palletizer" data-target-ru="ru-palletizer" data-target-en="en-palletizer">Паллетировщик</a>
+        <a class="deployment-nav" href="#ru-features" data-nav-ru="Возможности" data-nav-en="Features" data-target-ru="ru-features" data-target-en="en-features">Возможности</a>
+        <a class="deployment-nav" href="#ru-languages" data-nav-ru="Языки" data-nav-en="Languages" data-target-ru="ru-languages" data-target-en="en-languages">Языки</a>
+        <a class="deployment-nav" href="#ru-updates" data-nav-ru="Обновления" data-nav-en="Updates" data-target-ru="ru-updates" data-target-en="en-updates">Обновления</a>
+        <a class="deployment-nav" href="#ru-auto" data-nav-ru="Автоматизация PRO" data-nav-en="PRO automation" data-target-ru="ru-auto" data-target-en="en-auto">Автоматизация PRO</a>
+        <a class="deployment-nav" href="#ru-pricing" data-nav-ru="Демо и цены" data-nav-en="Demo & pricing" data-target-ru="ru-pricing" data-target-en="en-pricing">Демо и цены</a>
+        <a class="deployment-nav" href="#buy" data-nav-ru="Как купить" data-nav-en="" data-target-ru="buy" data-target-en="">Как купить</a>
+        <a class="deployment-nav" href="#ru-deployment" data-nav-ru="Внедрение" data-nav-en="Deployment" data-target-ru="ru-deployment" data-target-en="en-deployment">Внедрение</a>
+        <a class="deployment-nav" href="#ru-reviews" data-nav-ru="Отзывы" data-nav-en="Reviews" data-target-ru="ru-reviews" data-target-en="en-reviews">Отзывы</a>
+        <a class="deployment-nav" href="#ru-related" data-nav-ru="Другие программы" data-nav-en="Other software" data-target-ru="ru-related" data-target-en="en-related">Другие программы</a>
+        <a class="deployment-nav" href="#ru-contact" data-nav-ru="Контакты" data-nav-en="Contact" data-target-ru="ru-contact" data-target-en="en-contact">Контакты</a>
+        <a class="deployment-nav" href="#constructions" data-nav-ru="Конструкции" data-nav-en="Box styles" data-target-ru="constructions" data-target-en="constructions">Конструкции</a>
+      </nav>
       <div class="lang" aria-label="Language switcher">
         <button id="btn-ru" type="button">Русский</button>
         <button id="btn-en" type="button">English</button>
@@ -401,7 +421,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 <main id="top" data-lang="ru">
 
   <!-- HERO -->
-  <section>
+  <section id="ru-overview">
     <div class="container grid2">
       <div class="card">
         <h1>Быстрый расчёт себестоимости<br>гофроизделий — без Excel и ручных ошибок</h1>
@@ -443,7 +463,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- FULL WIDTH SCREENSHOT (RU) -->
-  <section>
+  <section id="ru-work">
     <div class="container">
       <h2>Как это выглядит в работе</h2>
       <p>
@@ -493,7 +513,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
 <!-- BUNDLE PALLETIZER (RU) -->
-<section>
+<section id="ru-palletizer">
   <div class="container">
     <h2>Встроенный паллетировщик пачек</h2>
 
@@ -586,10 +606,10 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- MULTILANG + UPDATES -->
-  <section class="pt-language-section">
+  <section id="ru-languages" class="pt-language-section">
     <div class="pt-language-card"><div class="pt-language-copy"><h2>Мультиязычный интерфейс</h2><p>Калькулятор гофроящиков уже поставляется со словарями интерфейса для десяти языков. Переключение языка помогает внедрять программу в смешанных командах и на площадках с разными рабочими языками.</p><div class="pt-language-chips" aria-label="Поддерживаемые языки"><span class="pt-language-chip">Русский</span><span class="pt-language-chip">English</span><span class="pt-language-chip">Deutsch</span><span class="pt-language-chip">Français</span><span class="pt-language-chip" dir="rtl">עברית</span><span class="pt-language-chip">Italiano</span><span class="pt-language-chip">Қазақша</span><span class="pt-language-chip">Português</span><span class="pt-language-chip">Српски</span><span class="pt-language-chip">Español</span></div></div><p class="pt-language-note">Если нужен другой язык, можно самостоятельно создать словарь перевода для любого языка и подключить его к программе.</p></div>
   </section>
-  <section>
+  <section id="ru-updates">
     <div class="container"><div class="card">
         <h2>Обновления и словари</h2>
         <p>
@@ -672,7 +692,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </div>
 </section>
 
-<section class="purchase-guide smart-lang-ru" id="buy">
+<section id="buy" class="purchase-guide smart-lang-ru">
   <div class="purchase-guide-wrap">
     <div class="purchase-guide-head"><h2>Как купить</h2><p>Лицензия подготавливается для конкретного компьютера. Выполните шесть шагов, чтобы получить персональный дистрибутив.</p></div>
     <ol class="purchase-guide-grid">
@@ -719,7 +739,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- OTHER PRODUCTS (RU) -->
-  <section class="smart-related" id="other-programs" data-smart-related>
+  <section id="ru-related" class="smart-related" data-smart-related>
   <div class="smart-related-wrap">
     <div class="smart-lang-ru">
   <div class="smart-related-head">
@@ -807,7 +827,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   <!-- CTA -->
 
 
-  <section>
+  <section id="ru-contact">
     <div class="container card">
       <h2>Связаться со мной</h2>
       <p>
@@ -825,7 +845,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 <main data-lang="en" class="hidden">
 
   <!-- HERO -->
-  <section>
+  <section id="en-overview">
     <div class="container grid2">
       <div class="card">
         <h1>Fast cost estimation<br>for corrugated packaging — without Excel mistakes</h1>
@@ -868,7 +888,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- FULL WIDTH SCREENSHOT (EN) -->
-  <section>
+  <section id="en-work">
     <div class="container">
       <h2>How it looks in real work</h2>
       <p>
@@ -918,7 +938,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
 <!-- BUNDLE PALLETIZER (EN) -->
-<section>
+<section id="en-palletizer">
   <div class="container">
     <h2>Built-in bundle palletizer</h2>
 
@@ -1010,10 +1030,10 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- MULTILANG + UPDATES -->
-  <section class="pt-language-section">
+  <section id="en-languages" class="pt-language-section">
     <div class="pt-language-card"><div class="pt-language-copy"><h2>Multilingual interface</h2><p>Box Price Calculator already ships with interface dictionaries for ten languages. Language switching helps deploy the program in mixed teams and production sites with different working languages.</p><div class="pt-language-chips" aria-label="Supported languages"><span class="pt-language-chip">Русский</span><span class="pt-language-chip">English</span><span class="pt-language-chip">Deutsch</span><span class="pt-language-chip">Français</span><span class="pt-language-chip" dir="rtl">עברית</span><span class="pt-language-chip">Italiano</span><span class="pt-language-chip">Қазақша</span><span class="pt-language-chip">Português</span><span class="pt-language-chip">Српски</span><span class="pt-language-chip">Español</span></div></div><p class="pt-language-note">If another language is needed, you can create your own translation dictionary for any language and connect it to the program.</p></div>
   </section>
-  <section>
+  <section id="en-updates">
     <div class="container"><div class="card">
         <h2>Updates & dictionaries</h2>
         <p>
@@ -1126,7 +1146,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- OTHER PRODUCTS (EN) -->
-  <section class="smart-related" id="other-programs" data-smart-related>
+  <section id="en-related" class="smart-related" data-smart-related>
   <div class="smart-related-wrap">
     <div class="smart-lang-ru">
   <div class="smart-related-head">
@@ -1212,7 +1232,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 </section>
 
   <!-- CTA -->
-<section>
+<section id="en-contact">
     <div class="container card">
       <h2>Contact</h2>
       <p>
@@ -1280,6 +1300,10 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
 <script>
 (function () {
+  const header = document.querySelector(".topbar");
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty("--header-offset", (header.offsetHeight + 16) + "px");
+  }).observe(header);
   const RU = "ru";
   const EN = "en";
 
@@ -1298,9 +1322,12 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
   function setMetaForLang(lang){
     document.documentElement.lang = lang;
-    const deploymentNav = document.getElementById("deployment-nav");
-    deploymentNav.textContent = lang === RU ? "Внедрение" : "Deployment";
-    deploymentNav.href = lang === RU ? "#ru-deployment" : "#en-deployment";
+    document.querySelectorAll(".section-nav a").forEach(link => {
+      const target = link.getAttribute("data-target-" + lang);
+      link.hidden = !target;
+      link.textContent = link.getAttribute("data-nav-" + lang);
+      link.href = "#" + target;
+    });
     const meta = (lang === RU)
       ? {
           title: "Box Price Calculator — программа расчета себестоимости гофроящиков",
