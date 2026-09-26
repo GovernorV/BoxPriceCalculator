@@ -147,6 +147,13 @@ body{
 }
 .container{max-width:1200px;margin:auto;padding:0 20px}
 section{padding:52px 0}
+.deployment-section{scroll-margin-top:180px}
+.deployment-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:16px}
+.deployment-item{display:flex;align-items:center;gap:16px;min-height:52px;color:var(--text)}
+.deployment-logo{width:112px;height:48px;flex:0 0 112px;object-fit:contain;border-radius:8px;border:1px solid var(--line);background:#fff;padding:4px}
+.deployment-nav{display:inline-block;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700}
+.deployment-nav:hover{border-color:var(--accent)}
+.topbar .inner{flex-wrap:wrap}
 h1,h2,h3{margin:0 0 12px}
 p{margin:0 0 12px;color:var(--muted)}
 ul{margin:0 0 12px 18px;color:var(--muted)}
@@ -377,6 +384,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         </div>
       </a>
 
+      <nav aria-label="Навигация"><a class="deployment-nav" id="deployment-nav" href="#ru-deployment">Внедрение</a></nav>
       <div class="lang" aria-label="Language switcher">
         <button id="btn-ru" type="button">Русский</button>
         <button id="btn-en" type="button">English</button>
@@ -677,6 +685,18 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
     </ol>
   </div>
 </section>
+
+  <section id="ru-deployment" class="deployment-section">
+    <div class="container">
+      <div class="card">
+        <h2>Внедрение</h2>
+        <p>Программа «Калькулятор гофроящиков» используется в компании:</p>
+        <ul class="deployment-list">
+          <li class="deployment-item"><img class="deployment-logo" src="assets/deployment/chelyabinskiy-karton.png" alt="Логотип «Челябинский картон»" width="112" height="48" loading="lazy"><span>Челябинский картон</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <section id="ru-reviews">
     <div class="container">
@@ -1073,6 +1093,18 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </div>
 </section>
 
+  <section id="en-deployment" class="deployment-section">
+    <div class="container">
+      <div class="card">
+        <h2>Deployment</h2>
+        <p>Box Price Calculator is used by:</p>
+        <ul class="deployment-list">
+          <li class="deployment-item"><img class="deployment-logo" src="assets/deployment/chelyabinskiy-karton.png" alt="Chelyabinskiy Karton logo" width="112" height="48" loading="lazy"><span>Chelyabinskiy Karton</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="en-reviews">
     <div class="container">
       <h2>Reviews</h2>
@@ -1266,6 +1298,9 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
   function setMetaForLang(lang){
     document.documentElement.lang = lang;
+    const deploymentNav = document.getElementById("deployment-nav");
+    deploymentNav.textContent = lang === RU ? "Внедрение" : "Deployment";
+    deploymentNav.href = lang === RU ? "#ru-deployment" : "#en-deployment";
     const meta = (lang === RU)
       ? {
           title: "Box Price Calculator — программа расчета себестоимости гофроящиков",
